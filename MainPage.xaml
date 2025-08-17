@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PomodoroTimer.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid Padding="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Button x:Name="pomodoroButton" Text="Pomodoro" FontSize="12" Grid.Row="0" Grid.Column="0" Clicked="OnClickedPomodoro" />
+                <Button x:Name="ShortBreakButton" Text="ShortBreak" FontSize="12" Grid.Row="0" Grid.Column="1" Clicked="OnClickedShortBreak" />
+                <Button x:Name="LongBreakButton" Text="LongBreak" FontSize="12" Grid.Row="0" Grid.Column="2" Clicked="OnClickedLongBreak"/>
+
+            </Grid>
+
+            <Label x:Name="timeLabel" Text="25:00" FontSize="25" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Button x:Name="startStopButton" Text="Start" HorizontalOptions="Center" VerticalOptions="Center" Clicked="OnClickStartStop"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="pomodoroLabel" Text="0 Pomodoro Completed" Grid.Row="0" Grid.Column="0" FontSize="12" HorizontalOptions="Center" Padding="10" />
+                <Button x:Name="refreshPomodoro" Text="Refresh" Grid.Row="0" Grid.Column="1" HorizontalOptions="End" Clicked="OnClickedRefresh" />
+            </Grid>
+
+
+            <Label Text="Tasks" FontSize="25" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Grid Padding="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Entry x:Name="taskEntry" Placeholder="Enter your task" Grid.Row="0" Grid.Column="0"/>
+                <Button Text="Add" Grid.Row="0" Grid.Column="1" Clicked="AddTask"/>
+
+            </Grid>
+
+            <Grid x:Name="tasksGrid" Padding="20">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+
+
+
+
+
+
+
+        </VerticalStackLayout>
+
+        
+
+
+
+
+    </ScrollView>
+
+</ContentPage>
